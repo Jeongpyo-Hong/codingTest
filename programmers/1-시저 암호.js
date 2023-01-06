@@ -1,20 +1,13 @@
 function solution(s, n) {
   const arr = [...s];
   const newArr = [];
-  const az = new Array(26)
-    .fill()
-    .map((_, i) => String.fromCharCode(i + 97))
-    .join("");
-  const AZ = new Array(26)
-    .fill()
-    .map((_, i) => String.fromCharCode(i + 65))
-    .join("");
+  const az = new Array(26).fill().map((_, i) => String.fromCharCode(i + 97));
+  const AZ = new Array(26).fill().map((_, i) => String.fromCharCode(i + 65));
   const azArr = [...az, ...az];
   const AZArr = [...AZ, ...AZ];
 
   for (i = 0; i < arr.length; i++) {
     const toLow = arr[i].toLowerCase();
-    console.log("toLow", toLow);
     if (arr[i] === " ") {
       newArr.push(" ");
     } else if (arr[i] === toLow) {
